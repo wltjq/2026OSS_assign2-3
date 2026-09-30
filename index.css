@@ -1,0 +1,46 @@
+
+.container {
+    background-color: lightgray;
+    padding : 30px;
+}
+
+.title {
+    text-align: center;
+    padding : 10px;
+}
+
+.form {
+    border-color : black;
+    background-color: white;
+    width: 50%;
+    margin: 0 auto;
+    padding : 30px;
+}
+
+.form input {
+    margin-bottom: 10px;
+}
+
+.btn {
+    margin : 10px;
+}
+
+.btn:hover {
+    background-color: aliceblue;
+    cursor:pointer;
+}
+
+.book-table {
+    background-color: white;
+    width : 80%;
+    margin : 30px auto;
+    border : 1px solid black;
+}
+
+.book-table th,
+.book-table td {
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
