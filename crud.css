@@ -1,6 +1,9 @@
+body {
+    margin : 0;
+    background-color: lightgray;
+}
 
 .container {
-    background-color: lightgray;
     padding : 30px;
 }
 
@@ -21,15 +24,6 @@
     margin-bottom: 10px;
 }
 
-.btn {
-    margin : 10px;
-}
-
-.btn:hover {
-    background-color: aliceblue;
-    cursor:pointer;
-}
-
 .book-table {
     background-color: white;
     width : 80%;
@@ -44,3 +38,17 @@
     text-align: center;
 }
 
+button:hover  {
+    background-color: lightgray;
+    cursor : pointer;
+}
+
+button {
+    padding : 6px 12px;
+    border : 1px solid black;
+    border-radius: 4px;
+}
+
+#addbtn {
+    margin-top : 10px;
+}
