@@ -45,6 +45,23 @@ function render() {
     });
 }
 
+const btn = document.querySelector(".btn");
+btn.addEventListener("click", function() {
+    event.preventDefault();
+    const id = document.querySelector("#id");
+    const title = document.querySelector("#title");
+    const author = document.querySelector("#author");
+    const price = document.querySelector("#price");
+    const category = document.querySelector("#category");
+
+    books.push({id : id.value, title : title.value, author : author.value, price : price.value, category : category.value});
+    id.value = "";
+    title.value = "";
+    author.value = "";
+    price.value = "";
+    render();
+})
+
 
 
 render();

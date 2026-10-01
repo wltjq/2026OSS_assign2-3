@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Title</title>
-        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="crud.css">
     </head>
     <body>
         <div class="container">
@@ -13,13 +13,13 @@
             </div>
 
             <fieldset class = "form">
-                <form action = "/users" method="post">
+                    <form action = "/users" method="post">
                     <label>id:</label>
                     <input type = "text" id="id" placeholder="id를 입력" required><br>
 
 
                     <label>title:</label>
-                    <input type = "text" id="name" placeholder="도서명을 입력" required><br>
+                    <input type = "text" id="title" placeholder="도서명을 입력" required><br>
 
                     <label>author:</label>
                     <input type = "text" id="author" placeholder="작가를 입력" required><br>
@@ -28,7 +28,7 @@
                     <input type = "text" id="price" placeholder="가격을 입력" required><br>
 
                     <label>category:</label>
-                    <select>
+                    <select id = "category">
                         <option>소설</option>
                         <option>시</option>
                         <option>잡지</option>
@@ -47,6 +47,6 @@
                 <tbody class="book-list"></tbody>
             </table>
         </div>
-        <script src = "index.js"></script>
+        <script src = "crud.js"></script>
     </body>
 </html>
