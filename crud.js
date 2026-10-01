@@ -135,6 +135,9 @@ booklist.addEventListener("click", function(e) {
     const targetId = tr.children[0].textContent;
 
     if(e.target.className === "delbtn") {
+        if(!confirm("삭제하겠습니까?")) {
+            return;
+        }
         for(let i = 0; i<books.length ; i++) {
             if(String(books[i].id) === targetId) {
                 books.splice(i,1);
