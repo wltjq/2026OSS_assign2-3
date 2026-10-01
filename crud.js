@@ -27,7 +27,7 @@ let books = [
 function render() {
     const booklist = document.querySelector('.book-list');
     booklist.innerHTML = "";
-    
+
     books.forEach((book) => {
         const tr = document.createElement("tr");
         tr.innerHTML = `
