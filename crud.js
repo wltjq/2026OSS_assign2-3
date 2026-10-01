@@ -45,16 +45,42 @@ function render() {
     });
 }
 
-const btn = document.querySelector(".btn");
-btn.addEventListener("click", function() {
-    event.preventDefault();
+const btn = document.querySelector("#addbtn");
+btn.addEventListener("click", function(e) {
+    e.preventDefault();
     const id = document.querySelector("#id");
     const title = document.querySelector("#title");
     const author = document.querySelector("#author");
     const price = document.querySelector("#price");
     const category = document.querySelector("#category");
 
-    books.push({id : id.value, title : title.value, author : author.value, price : price.value, category : category.value});
+    const idNum = Number(id.value);
+    if(id.value.trim() === "" || isNaN(idNum)) {
+        alert("id를 다시 확인하세요.");
+        id.focus();
+        return;
+    }
+
+    if(title.value.trim() === "") {
+        alert("도서명을 입력하세요.");
+        title.focus();
+        return;
+    }
+
+    if(author.value.trim() === "") {
+        alert("작가를 입력하세요.");
+        author.focus();
+        return;
+    }
+
+    const priceNum = Number(price.value);
+    if(price.value.trim() === "" || isNaN(priceNum) || priceNum < 0) {
+        alert("가격을 다시 확인하세요.");
+        price.focus();
+        return;
+    }
+
+    books.push({id : id.value.trim(), title : title.value.trim(), author : author.value.trim(), price : priceNum, category : category.value});
     id.value = "";
     title.value = "";
     author.value = "";
