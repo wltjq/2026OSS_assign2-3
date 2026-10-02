@@ -56,7 +56,7 @@ let editingId =null;
 btn.addEventListener("click", function(e) {
     e.preventDefault();
     const idNum = Number(id.value);
-    if(id.value.trim() === "" || isNaN(idNum)) {
+    if(id.value.trim() === "" || isNaN(idNum) || idNum < 1) {
         alert("id를 다시 확인하세요.");
         id.focus();
         return;
